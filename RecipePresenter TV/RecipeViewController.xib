@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeViewController" customModule="RecipePresenter_TV" customModuleProvider="target">
+            <connections>
+                <outlet property="stepVCContainer" destination="VGm-5T-zrS" id="k6z-A2-sDa"/>
+                <outlet property="titleLabel" destination="LNV-Wy-ntN" id="JwQ-VX-xFn"/>
+                <outlet property="view" destination="16B-bm-4cc" id="6Tp-rG-vd3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="16B-bm-4cc">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGV-MH-Z8g">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X65-00-epa">
+                            <rect key="frame" x="98" y="57" width="113" height="86"/>
+                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                            <state key="normal" title="←"/>
+                            <connections>
+                                <action selector="goToPreviousStep:" destination="-1" eventType="primaryActionTriggered" id="tCZ-oe-mte"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUJ-kC-Psk">
+                            <rect key="frame" x="271" y="57" width="113" height="86"/>
+                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                            <state key="normal" title="→"/>
+                            <connections>
+                                <action selector="goToNextStep:" destination="-1" eventType="primaryActionTriggered" id="rCm-eQ-sBx"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-Wy-ntN">
+                            <rect key="frame" x="444" y="100" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdH-mO-1DM">
+                            <rect key="frame" x="1710" y="57" width="112" height="86"/>
+                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                            <state key="normal" title="✕"/>
+                            <connections>
+                                <action selector="disconnectAndClose:" destination="-1" eventType="touchUpInside" id="GBa-h5-U3v"/>
+                                <action selector="disconnectAndClose:" destination="-1" eventType="primaryActionTriggered" id="qEa-LO-vb6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="vUJ-kC-Psk" firstAttribute="leading" secondItem="X65-00-epa" secondAttribute="trailing" constant="60" id="2Ky-EH-OWI"/>
+                        <constraint firstItem="LNV-Wy-ntN" firstAttribute="leading" secondItem="vUJ-kC-Psk" secondAttribute="trailing" constant="60" id="5rs-4Y-3kT"/>
+                        <constraint firstItem="X65-00-epa" firstAttribute="centerY" secondItem="JGV-MH-Z8g" secondAttribute="centerY" id="8b0-pg-W4M"/>
+                        <constraint firstItem="xdH-mO-1DM" firstAttribute="centerY" secondItem="X65-00-epa" secondAttribute="centerY" id="Mbf-qn-TfL"/>
+                        <constraint firstItem="LNV-Wy-ntN" firstAttribute="centerY" secondItem="X65-00-epa" secondAttribute="centerY" id="Pxk-sG-IkX"/>
+                        <constraint firstAttribute="trailing" secondItem="xdH-mO-1DM" secondAttribute="trailing" constant="98" id="XgS-0D-kzR"/>
+                        <constraint firstAttribute="height" constant="200" id="ipt-2Y-gUH"/>
+                        <constraint firstItem="X65-00-epa" firstAttribute="leading" secondItem="JGV-MH-Z8g" secondAttribute="leading" constant="98" id="jqd-9n-SkO"/>
+                        <constraint firstItem="vUJ-kC-Psk" firstAttribute="centerY" secondItem="X65-00-epa" secondAttribute="centerY" id="r7Y-Mb-9cz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGm-5T-zrS">
+                    <rect key="frame" x="0.0" y="200" width="1920" height="880"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JGV-MH-Z8g" secondAttribute="trailing" id="9V8-46-Hbt"/>
+                <constraint firstItem="VGm-5T-zrS" firstAttribute="leading" secondItem="16B-bm-4cc" secondAttribute="leading" id="Lr3-MH-mMh"/>
+                <constraint firstItem="JGV-MH-Z8g" firstAttribute="top" secondItem="16B-bm-4cc" secondAttribute="top" id="ai7-i8-wlB"/>
+                <constraint firstItem="JGV-MH-Z8g" firstAttribute="leading" secondItem="16B-bm-4cc" secondAttribute="leading" id="hud-2X-197"/>
+                <constraint firstAttribute="trailing" secondItem="VGm-5T-zrS" secondAttribute="trailing" id="n8G-TL-vtD"/>
+                <constraint firstAttribute="bottom" secondItem="VGm-5T-zrS" secondAttribute="bottom" id="oFE-c4-aVS"/>
+                <constraint firstItem="VGm-5T-zrS" firstAttribute="top" secondItem="JGV-MH-Z8g" secondAttribute="bottom" id="r9s-tR-Ogx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yiS-4I-aK1"/>
+        </view>
+    </objects>
+</document>

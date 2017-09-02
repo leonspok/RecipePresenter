@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeStepViewController" customModule="RecipePresenter_TV" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="yxD-gm-Jnp" id="idN-1g-vy1"/>
+                <outlet property="textLabel" destination="XDb-QZ-Z1J" id="7dW-kg-Dzh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrS-jl-fpn">
+                    <rect key="frame" x="90" y="160" width="820" height="860"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDb-QZ-Z1J">
+                            <rect key="frame" x="100" y="100" width="620" height="53"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="XDb-QZ-Z1J" secondAttribute="trailing" constant="100" id="Q4b-Sl-N3N"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XDb-QZ-Z1J" secondAttribute="bottom" constant="100" id="bpG-0Y-aAt"/>
+                        <constraint firstItem="XDb-QZ-Z1J" firstAttribute="leading" secondItem="vrS-jl-fpn" secondAttribute="leading" constant="100" id="x6A-Dc-ggj"/>
+                        <constraint firstItem="XDb-QZ-Z1J" firstAttribute="top" secondItem="vrS-jl-fpn" secondAttribute="top" constant="100" id="xvr-6D-2Fq"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="yxD-gm-Jnp">
+                    <rect key="frame" x="1010" y="160" width="820" height="860"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LYg-2S-8Tr"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nkI-NY-t1X" firstAttribute="bottom" secondItem="vrS-jl-fpn" secondAttribute="bottom" id="5ac-ik-ZLz"/>
+                <constraint firstItem="vrS-jl-fpn" firstAttribute="top" secondItem="nkI-NY-t1X" secondAttribute="top" constant="100" id="6M9-xG-Iln"/>
+                <constraint firstItem="nkI-NY-t1X" firstAttribute="bottom" secondItem="yxD-gm-Jnp" secondAttribute="bottom" id="CBC-QI-WPb"/>
+                <constraint firstItem="vrS-jl-fpn" firstAttribute="leading" secondItem="nkI-NY-t1X" secondAttribute="leading" id="McV-e4-ueZ"/>
+                <constraint firstItem="nkI-NY-t1X" firstAttribute="trailing" secondItem="yxD-gm-Jnp" secondAttribute="trailing" id="SJD-V8-OGa"/>
+                <constraint firstItem="yxD-gm-Jnp" firstAttribute="top" secondItem="nkI-NY-t1X" secondAttribute="top" constant="100" id="fWj-WJ-NO5"/>
+                <constraint firstItem="vrS-jl-fpn" firstAttribute="trailing" secondItem="nkI-NY-t1X" secondAttribute="centerX" constant="-50" id="jTR-Uh-PD6"/>
+                <constraint firstItem="yxD-gm-Jnp" firstAttribute="leading" secondItem="nkI-NY-t1X" secondAttribute="centerX" constant="50" id="xfW-ob-n99"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="nkI-NY-t1X"/>
+        </view>
+    </objects>
+</document>
